@@ -1,21 +1,25 @@
 const assert = require('assert');
-const rectangle = require('../rectangle');
+const Rectangle = require('../rectangle');
 
-describe('rectangle', () => {
+describe('Rectangle', () => {
 
-  it('true is sent if two sides are equal or false if this is not the case', () => {
-    const rectangle = new Rectangle(10, 10);
-    assert.strictEqual(rectangle, true);
-    assert.strictEqual(rectangle, false);
+  it('is a square', () => {
+    const rectangle1 = new Rectangle(10, 10);
+    assert.strictEqual(rectangle1.isSquare(), true);
   });
 
+  it('is not a square', () => {
+    const rectangle2 = new Rectangle(2, 4);
+    assert.strictEqual(rectangle2.isSquare(), false);
+  })
+
   it('returns the rectangle surface', () => {
-    const rectangle = new Rectangle(13, 7);
-    assert.strictEqual(rectangle(13, 7), 91);
+    const rectangle3 = new Rectangle(13, 7);
+    assert.strictEqual(rectangle3.getArea(), 91);
   });
 
   it('returns the rectangle superficie', () => {
-    const rectangle = new Rectangle(13, 7);
-    assert.strictEqual(rectangle(13, 7), 40);
+    const rectangle4 = new Rectangle(13, 7);
+    assert.strictEqual(rectangle4.isSquare(), 40);
   });
 });
