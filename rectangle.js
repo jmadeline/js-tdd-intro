@@ -18,7 +18,7 @@ class Rectangle {
   }
 
   getPerimeter() {
-
+    return (this.a + this.b) * 2;
   }
 }
 

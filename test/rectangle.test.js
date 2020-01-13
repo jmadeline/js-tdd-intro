@@ -20,6 +20,6 @@ describe('Rectangle', () => {
 
   it('returns the rectangle superficie', () => {
     const rectangle4 = new Rectangle(13, 7);
-    assert.strictEqual(rectangle4.isSquare(), 40);
+    assert.strictEqual(rectangle4.getPerimeter(), 40);
   });
 });
